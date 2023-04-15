@@ -19,18 +19,56 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
+/**
+ * Main activity.
+
+ *  @author    Nisim Doron Krief <nisimandroi@gmail.com>
+ *  @version    1.1
+ *  @since    27/02/2023 (the date of the package the class was added)
+ *  @info Program that uses Internal Files, buttons and options menu to Write and save
+ *        the text, show it and save it on a particular file when pressed save or exit . */
 public class MainActivity extends AppCompatActivity {
+    /**
+     * The EditText eT.
+     */
     EditText eT;
+    /**
+     * The N tv.
+     */
     TextView nTv;
+    /**
+     * The Fos.
+     */
     FileOutputStream fos;
+    /**
+     * The Osw.
+     */
     OutputStreamWriter osw;
 
+    /**
+     * The Bw.
+     */
     BufferedWriter bw;
+    /**
+     * The Fis.
+     */
     FileInputStream fis;
+    /**
+     * The Isr.
+     */
     InputStreamReader isr;
 
+    /**
+     * The Br.
+     */
     BufferedReader br;
+    /**
+     * The Line.
+     */
     String line;
+    /**
+     * The Text.
+     */
     String Text;
 
     @Override
@@ -77,11 +115,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Save.
+     *
+     * @param view the view
+     */
     public void Save(View view) {
         Shomer();
         eT.setText("");
     }
 
+    /**
+     * Reset.
+     *
+     * @param view the view
+     */
     public void Reset(View view) {
         nTv.setText("");
         try {
@@ -97,10 +145,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Exit.
+     *
+     * @param view the view
+     */
     public void Exit(View view) {
         Shomer();
         finish();
     }
+
+    /**
+     * Shomer.
+     */
     public void Shomer() {
         String textsaved = eT.getText().toString();
         try {

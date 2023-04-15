@@ -7,6 +7,9 @@ import android.view.Menu;
 import android.view.View;
 
 
+/**
+ * Credits
+ */
 public class Credits extends AppCompatActivity {
 
         @Override
@@ -19,6 +22,11 @@ public class Credits extends AppCompatActivity {
                 return true;
         }
 
+        /**
+         * Finish.
+         *
+         * @param view the view
+         */
         public void Finish(View view) {
                 finish();
         }
